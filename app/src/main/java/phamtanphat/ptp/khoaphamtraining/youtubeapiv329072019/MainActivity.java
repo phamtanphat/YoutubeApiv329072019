@@ -6,11 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
-public class MainActivity extends AppCompatActivity implements YouTubePlayer.OnInitializedListener {
+public class MainActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
 
     YouTubePlayerView youTubePlayerView;
@@ -39,6 +40,10 @@ public class MainActivity extends AppCompatActivity implements YouTubePlayer.OnI
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (requestCode == 123 && resultCode == RESULT_OK && data != null){
+
+            youTubePlayerView.initialize(API_KEY,this);
+        }
         super.onActivityResult(requestCode, resultCode, data);
     }
 }
