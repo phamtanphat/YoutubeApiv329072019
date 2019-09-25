@@ -24,6 +24,7 @@ public class MainActivity extends YouTubeBaseActivity implements YouTubePlayer.O
         youTubePlayerView = findViewById(R.id.youtubePlayerview);
 
         youTubePlayerView.initialize(API_KEY,this);
+//        https://www.googleapis.com/youtube/v3/search?part=snippet&q=android&maxResults=50&type=video&key=AIzaSyDw1xWgw-tzAEnKhPUpCPEpNXTwbs3e6hY
     }
 
     @Override
