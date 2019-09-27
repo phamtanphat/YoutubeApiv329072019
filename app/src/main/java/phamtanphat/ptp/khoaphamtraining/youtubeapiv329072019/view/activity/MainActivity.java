@@ -5,9 +5,16 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 
 import phamtanphat.ptp.khoaphamtraining.youtubeapiv329072019.R;
+import phamtanphat.ptp.khoaphamtraining.youtubeapiv329072019.api.retrofit.RequestApi;
+import phamtanphat.ptp.khoaphamtraining.youtubeapiv329072019.api.retrofit.RetrofitInit;
+import phamtanphat.ptp.khoaphamtraining.youtubeapiv329072019.model.Demo1;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +28,19 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         toolbar.setBackgroundColor(Color.BLUE);
 
+        Call<Demo1> callback = RetrofitInit.initApi().apidemo1();
+        callback.enqueue(new Callback<Demo1>() {
+            @Override
+            public void onResponse(Call<Demo1> call, Response<Demo1> response) {
+                Demo1 demo1 = response.body();
+                Log.d("BBB",demo1.getLogo());
+            }
 
+            @Override
+            public void onFailure(Call<Demo1> call, Throwable t) {
+
+            }
+        });
     }
 
     @Override

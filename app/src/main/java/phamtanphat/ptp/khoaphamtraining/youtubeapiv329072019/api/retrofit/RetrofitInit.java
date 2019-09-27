@@ -18,7 +18,13 @@ public class RetrofitInit {
     private RetrofitInit(){
 
     }
-    public static Retrofit getInstance(String base_url){
+    public static RequestApi initApi(){
+        if (mretrofit == null){
+            mretrofit = getInstance("https://khoapham.vn/KhoaPhamTraining/json/tien/");
+        }
+        return mretrofit.create(RequestApi.class);
+    }
+    private static Retrofit getInstance(String base_url){
         if (mretrofit == null){
 
             Gson gson  = new GsonBuilder().setLenient().create();
