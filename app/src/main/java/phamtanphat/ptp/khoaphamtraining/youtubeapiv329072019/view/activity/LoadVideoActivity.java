@@ -1,4 +1,4 @@
-package phamtanphat.ptp.khoaphamtraining.youtubeapiv329072019;
+package phamtanphat.ptp.khoaphamtraining.youtubeapiv329072019.view.activity;
 
 import androidx.annotation.Nullable;
 
@@ -9,6 +9,8 @@ import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
+
+import phamtanphat.ptp.khoaphamtraining.youtubeapiv329072019.R;
 
 public class LoadVideoActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
