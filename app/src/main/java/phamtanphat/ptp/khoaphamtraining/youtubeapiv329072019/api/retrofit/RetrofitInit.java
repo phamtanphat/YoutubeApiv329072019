@@ -29,14 +29,11 @@ public class RetrofitInit {
                                 .retryOnConnectionFailure(true)
                                 .protocols(Arrays.asList(Protocol.HTTP_1_1))
                                 .build();
-
-
             mretrofit = new Retrofit.Builder()
                             .client(okHttpClient)
                             .addConverterFactory(GsonConverterFactory.create(gson))
                             .baseUrl(base_url)
                             .build();
-
 
         }
         return  mretrofit;
