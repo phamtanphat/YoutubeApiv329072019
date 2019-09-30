@@ -1,9 +1,11 @@
-package phamtanphat.ptp.khoaphamtraining.youtubeapiv329072019.api.modelapi;
+package phamtanphat.ptp.khoaphamtraining.youtubeapiv329072019.model;
 
 import java.util.List;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import phamtanphat.ptp.khoaphamtraining.youtubeapiv329072019.api.modelapi.Item;
 
 public class Videoyoutube {
 

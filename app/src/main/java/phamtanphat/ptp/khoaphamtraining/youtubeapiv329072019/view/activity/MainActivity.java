@@ -11,14 +11,14 @@ import android.view.Menu;
 import java.util.HashMap;
 
 import phamtanphat.ptp.khoaphamtraining.youtubeapiv329072019.R;
+import phamtanphat.ptp.khoaphamtraining.youtubeapiv329072019.api.retrofit.RequestApi;
 import phamtanphat.ptp.khoaphamtraining.youtubeapiv329072019.api.retrofit.RetrofitInit;
+import phamtanphat.ptp.khoaphamtraining.youtubeapiv329072019.model.Videoyoutube;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
-
-
 
     Toolbar toolbar;
     @Override
@@ -30,7 +30,15 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         toolbar.setBackgroundColor(Color.BLUE);
 
-
+        Call<Videoyoutube> callbackvideo = RetrofitInit
+                                            .initApi()
+                                            .searchYotubeVideo(
+                                                    "snippet",
+                                                    "android",
+                                                    "50",
+                                                    "video",
+                                                    "AIzaSyDw1xWgw-tzAEnKhPUpCPEpNXTwbs3e6hY"
+                                            );
 
     }
 
