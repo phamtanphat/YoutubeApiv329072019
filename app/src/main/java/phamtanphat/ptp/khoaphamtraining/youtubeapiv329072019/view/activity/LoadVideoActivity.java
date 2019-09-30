@@ -27,6 +27,7 @@ public class LoadVideoActivity extends YouTubeBaseActivity implements YouTubePla
 
         youTubePlayerView.initialize(API_KEY,this);
 //        https://www.googleapis.com/youtube/v3/search?part=snippet&q=android&maxResults=50&type=video&key=AIzaSyDw1xWgw-tzAEnKhPUpCPEpNXTwbs3e6hY
+//        https://emre1512.github.io/Easily-generate-JSON-model-from-JSON-string-using-GsonFormat/
     }
 
     @Override
