@@ -9,7 +9,6 @@ import retrofit2.http.QueryMap;
 
 public interface RequestApi {
 //    search?part=snippet&q=android&maxResults=50&type=video&key=AIzaSyDw1xWgw-tzAEnKhPUpCPEpNXTwbs3e6hY
-
     @GET("search")
     Call<String> searchYotubeVideo(@Query("part") String part,
                                    @Query("q") String q,
