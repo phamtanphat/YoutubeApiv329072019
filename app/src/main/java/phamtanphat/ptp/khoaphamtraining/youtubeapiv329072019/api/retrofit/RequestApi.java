@@ -1,11 +1,19 @@
 package phamtanphat.ptp.khoaphamtraining.youtubeapiv329072019.api.retrofit;
 
-import phamtanphat.ptp.khoaphamtraining.youtubeapiv329072019.model.Demo1;
+import java.util.HashMap;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Query;
+import retrofit2.http.QueryMap;
 
 public interface RequestApi {
+//    search?part=snippet&q=android&maxResults=50&type=video&key=AIzaSyDw1xWgw-tzAEnKhPUpCPEpNXTwbs3e6hY
 
-    @GET("demo1.json")
-    Call<Demo1> apidemo1();
+    @GET("search")
+    Call<String> searchYotubeVideo(@Query("part") String part,
+                                   @Query("q") String q,
+                                   @Query("maxResults") String maxResults,
+                                   @Query("type") String type,
+                                   @Query("key") String key);
 }
