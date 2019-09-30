@@ -39,6 +39,18 @@ public class MainActivity extends AppCompatActivity {
                                                     "video",
                                                     "AIzaSyDw1xWgw-tzAEnKhPUpCPEpNXTwbs3e6hY"
                                             );
+        callbackvideo.enqueue(new Callback<Videoyoutube>() {
+            @Override
+            public void onResponse(Call<Videoyoutube> call, Response<Videoyoutube> response) {
+                Videoyoutube videoyoutube = response.body();
+                Log.d("BBB",videoyoutube.getItems().get(0).getId().getVideoId());
+            }
+
+            @Override
+            public void onFailure(Call<Videoyoutube> call, Throwable t) {
+
+            }
+        });
 
     }
 
