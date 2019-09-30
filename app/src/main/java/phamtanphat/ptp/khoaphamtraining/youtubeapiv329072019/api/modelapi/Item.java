@@ -5,49 +5,27 @@ import com.google.gson.annotations.SerializedName;
 
 public class Item {
 
-@SerializedName("kind")
-@Expose
-private String kind;
-@SerializedName("etag")
-@Expose
-private String etag;
-@SerializedName("id")
-@Expose
-private Id id;
-@SerializedName("snippet")
-@Expose
-private Snippet snippet;
+    @SerializedName("id")
+    @Expose
+    private Id id;
+    @SerializedName("snippet")
+    @Expose
+    private Snippet snippet;
 
-public String getKind() {
-return kind;
-}
+    public Id getId() {
+        return id;
+    }
 
-public void setKind(String kind) {
-this.kind = kind;
-}
+    public void setId(Id id) {
+        this.id = id;
+    }
 
-public String getEtag() {
-return etag;
-}
+    public Snippet getSnippet() {
+        return snippet;
+    }
 
-public void setEtag(String etag) {
-this.etag = etag;
-}
-
-public Id getId() {
-return id;
-}
-
-public void setId(Id id) {
-this.id = id;
-}
-
-public Snippet getSnippet() {
-return snippet;
-}
-
-public void setSnippet(Snippet snippet) {
-this.snippet = snippet;
-}
+    public void setSnippet(Snippet snippet) {
+        this.snippet = snippet;
+    }
 
 }
