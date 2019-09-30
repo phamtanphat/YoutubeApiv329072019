@@ -17,6 +17,7 @@ public class LoadVideoActivity extends YouTubeBaseActivity implements YouTubePla
 
     YouTubePlayerView youTubePlayerView;
     String API_KEY = "AIzaSyAhKNr7hCcAkYiwSeWNmHePoxHjvV8H3Uc";
+    String API_KEY2 = "AIzaSyDw1xWgw-tzAEnKhPUpCPEpNXTwbs3e6hY";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
