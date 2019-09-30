@@ -11,7 +11,7 @@ public class Mainviewmodel extends ViewModel {
     public Mainviewmodel() {
     }
 
-    MutableLiveData<Videoyoutube> dataVideo = VideoYoutubeRespo
+    public MutableLiveData<Videoyoutube> dataVideo = VideoYoutubeRespo
                                     .getInstance()
                                     .getApiVideoYoutube();
 

@@ -26,8 +26,7 @@ public class VideoYoutubeRespo {
     }
     public MutableLiveData<Videoyoutube> getApiVideoYoutube(){
         final MutableLiveData<Videoyoutube> data = new MutableLiveData<>();
-        Call<Videoyoutube> callbackvideo = RetrofitInit
-                .initApi()
+        Call<Videoyoutube> callbackvideo = requestApi
                 .searchYotubeVideo(
                         "snippet",
                         "android",
