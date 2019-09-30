@@ -30,27 +30,6 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         toolbar.setBackgroundColor(Color.BLUE);
 
-        Call<Videoyoutube> callbackvideo = RetrofitInit
-                                            .initApi()
-                                            .searchYotubeVideo(
-                                                    "snippet",
-                                                    "android",
-                                                    "50",
-                                                    "video",
-                                                    "AIzaSyDw1xWgw-tzAEnKhPUpCPEpNXTwbs3e6hY"
-                                            );
-        callbackvideo.enqueue(new Callback<Videoyoutube>() {
-            @Override
-            public void onResponse(Call<Videoyoutube> call, Response<Videoyoutube> response) {
-                Videoyoutube videoyoutube = response.body();
-                Log.d("BBB",videoyoutube.getItems().get(0).getId().getVideoId());
-            }
-
-            @Override
-            public void onFailure(Call<Videoyoutube> call, Throwable t) {
-
-            }
-        });
 
     }
 
