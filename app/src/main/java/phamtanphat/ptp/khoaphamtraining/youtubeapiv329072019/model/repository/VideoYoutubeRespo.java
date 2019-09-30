@@ -24,8 +24,8 @@ public class VideoYoutubeRespo {
         }
         return videorespo;
     }
-
     public MutableLiveData<Videoyoutube> getApiVideoYoutube(){
+        final MutableLiveData<Videoyoutube> data = new MutableLiveData<>();
         Call<Videoyoutube> callbackvideo = RetrofitInit
                 .initApi()
                 .searchYotubeVideo(
@@ -39,7 +39,7 @@ public class VideoYoutubeRespo {
             @Override
             public void onResponse(Call<Videoyoutube> call, Response<Videoyoutube> response) {
                 Videoyoutube videoyoutube = response.body();
-                Log.d("BBB",videoyoutube.getItems().get(0).getId().getVideoId());
+                data.postValue(videoyoutube);
             }
 
             @Override
@@ -47,6 +47,7 @@ public class VideoYoutubeRespo {
 
             }
         });
+        return data;
     }
 
 }
